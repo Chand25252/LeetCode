@@ -8,7 +8,7 @@ package solutions;
  * @author Chand
  * @date 2019-03-10 09:27:29
  */
-public class Q12_Integer_to_Roman {
+public class Q012_Integer_to_Roman {
 
     public String intToRoman(int num) {
         int arr[] = {1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1};

@@ -12,7 +12,7 @@ package solutions;
  * @author Chand
  * @date 2019-03-09 13:44:54
  */
-public class Q11_Container_With_Most_Water {
+public class Q011_Container_With_Most_Water {
 
     public int maxArea(int[] height) {
         int head = 0;

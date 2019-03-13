@@ -8,7 +8,7 @@ package solutions;
  * @author Chand
  * @date 2019-03-05 14:52:06
  */
-public class Q6_ZigZag_Conversion {
+public class Q006_ZigZag_Conversion {
     public String convert(String s, int numRows) {
         if(s.length() <= numRows || numRows == 1) {
             return s;

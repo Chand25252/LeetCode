@@ -8,7 +8,7 @@ package solutions;
  * @author Chand
  * @date 2019-03-04 13:51:03
  */
-public class Q5_Longest_Palindromic_Substring {
+public class Q005_Longest_Palindromic_Substring {
     public String longestPalindrome(String s) {
         if ("".equals(s)) {
             return "";

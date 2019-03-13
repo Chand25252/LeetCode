@@ -13,7 +13,7 @@ import java.util.Map;
  * @author Chand
  * @date 2019-02-13 09:03:20
  */
-public class Q1_Two_Sum {
+public class Q001_Two_Sum {
     public int[] twoSum(int[] nums, int target) {
         int[] result = new int[2];
         Map<Integer, Integer> arrMap = new HashMap<Integer, Integer>();

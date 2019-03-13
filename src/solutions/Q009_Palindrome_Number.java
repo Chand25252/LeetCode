@@ -8,7 +8,7 @@ package solutions;
  * @author Chand
  * @date 2019-03-08 22:13:47
  */
-public class Q9_Palindrome_Number {
+public class Q009_Palindrome_Number {
     public boolean isPalindrome(int x) {
         if(x < 0) {
             return false;

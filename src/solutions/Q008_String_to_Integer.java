@@ -18,7 +18,7 @@ import java.math.BigDecimal;
  * @author Chand
  * @date 2019-03-07 15:19:26
  */
-public class Q8_String_to_Integer {
+public class Q008_String_to_Integer {
     public int myAtoi(String str) {
         BigDecimal result = new BigDecimal(0);
         BigDecimal rate = new BigDecimal(10);

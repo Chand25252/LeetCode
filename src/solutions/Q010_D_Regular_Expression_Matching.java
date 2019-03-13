@@ -11,5 +11,5 @@ package solutions;
         p 可能为空，且只包含从 a-z 的小写字母，以及字符 . 和 *。
 */
 
-public class Q10_D_Regular_Expression_Matching {
+public class Q010_D_Regular_Expression_Matching {
 }

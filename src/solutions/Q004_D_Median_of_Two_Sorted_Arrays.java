@@ -6,5 +6,5 @@ package solutions;
     你可以假设nums1和nums2不会同时为空。
 */
 
-public class Q4_D_Median_of_Two_Sorted_Arrays {
+public class Q004_D_Median_of_Two_Sorted_Arrays {
 }

@@ -8,7 +8,7 @@ package solutions;
  * @author Chand
  * @date 2019-03-06 22:21:31
  */
-public class Q7_Reverse_Integer {
+public class Q007_Reverse_Integer {
     public int reverse(int x) {
         if(x == Integer.MIN_VALUE) {
             return 0;

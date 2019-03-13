@@ -11,7 +11,7 @@ package solutions;
  * @author Chand
  * @date 2019-02-14 15:51:08
  */
-public class Q2_Add_Two_Numbers {
+public class Q002_Add_Two_Numbers {
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         int i = l1.val;
         int j = l2.val;

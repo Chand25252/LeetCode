@@ -11,7 +11,7 @@ import java.util.Map;
  * @author Chand
  * @date 2019-02-15 09:08:22
  */
-public class Q3_Longest_Substring_Without_Repeating_Characters {
+public class Q003_Longest_Substring_Without_Repeating_Characters {
     public int lengthOfLongestSubstring(String s) {
         char[] strArr = s.toCharArray();
         int result = 0;

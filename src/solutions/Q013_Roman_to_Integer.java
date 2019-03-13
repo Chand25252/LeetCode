@@ -11,7 +11,7 @@ import java.util.Map;
  * @author Chand
  * @date 2019-03-11 14:40:41
  */
-public class Q13_Roman_to_Integer {
+public class Q013_Roman_to_Integer {
     public int romanToInt(String s) {
         Map<String, Integer> roman_map = new HashMap<String, Integer>();
         roman_map.put("M", 1000);
