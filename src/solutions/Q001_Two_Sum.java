@@ -17,12 +17,12 @@ public class Q001_Two_Sum {
     public int[] twoSum(int[] nums, int target) {
         int[] result = new int[2];
         Map<Integer, Integer> arrMap = new HashMap<Integer, Integer>();
-        for(int i = 0; i < nums.length; i++) {
+        for (int i = 0; i < nums.length; i++) {
             arrMap.put(nums[i], i);
         }
-        for(int j = 0; j < nums.length; j++) {
+        for (int j = 0; j < nums.length; j++) {
             int key = target - nums[j];
-            if(arrMap.containsKey(key) && arrMap.get(key) != j) {
+            if (arrMap.containsKey(key) && arrMap.get(key) != j) {
                 result[0] = j;
                 result[1] = arrMap.get(key);
                 return result;

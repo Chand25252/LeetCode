@@ -10,25 +10,25 @@ package solutions;
  */
 public class Q006_ZigZag_Conversion {
     public String convert(String s, int numRows) {
-        if(s.length() <= numRows || numRows == 1) {
+        if (s.length() <= numRows || numRows == 1) {
             return s;
         }
         String result = "";
         int turn = numRows * 2 - 2;
         String[] resultArr = new String[numRows];
-        for(int i = 0; i < numRows; i++) {
+        for (int i = 0; i < numRows; i++) {
             resultArr[i] = "";
         }
-        for(int i = 0; i < s.length(); i++) {
+        for (int i = 0; i < s.length(); i++) {
             int temp = i % turn;
-            if(temp < numRows) {
+            if (temp < numRows) {
                 resultArr[temp] += s.charAt(i);
             } else {
                 resultArr[turn - temp] += s.charAt(i);
             }
         }
-        for(String str : resultArr) {
-            if(!str.isEmpty()) {
+        for (String str : resultArr) {
+            if (!str.isEmpty()) {
                 result += str;
             }
         }

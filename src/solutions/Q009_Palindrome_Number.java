@@ -10,12 +10,12 @@ package solutions;
  */
 public class Q009_Palindrome_Number {
     public boolean isPalindrome(int x) {
-        if(x < 0) {
+        if (x < 0) {
             return false;
         }
         int temp = x;
         int result = 0;
-        while(temp > 0) {
+        while (temp > 0) {
             result = result * 10;
             result = result + temp % 10;
             temp = temp / 10;

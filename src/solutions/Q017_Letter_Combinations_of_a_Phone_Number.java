@@ -33,21 +33,21 @@ public class Q017_Letter_Combinations_of_a_Phone_Number {
         };
         for (int i = 0; i < digits.length(); i++) {
             int index = Integer.parseInt(String.valueOf(digits.charAt(i)));
-            if(index == 0 || index == 1) {
+            if (index == 0 || index == 1) {
                 continue;
             }
             List<String> oldStr = result;
             List<String> newStr = new ArrayList<>();
-            for(int j = 0; j < str[index].length; j++) {
+            for (int j = 0; j < str[index].length; j++) {
                 newStr.add(str[index][j]);
             }
-            if(result.size() == 0) {
+            if (result.size() == 0) {
                 result = newStr;
                 continue;
             }
             result = new ArrayList<>();
-            for(String oldItem : oldStr) {
-                for(String newItem : newStr) {
+            for (String oldItem : oldStr) {
+                for (String newItem : newStr) {
                     result.add(oldItem + newItem);
                 }
             }

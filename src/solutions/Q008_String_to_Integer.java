@@ -23,19 +23,19 @@ public class Q008_String_to_Integer {
         BigDecimal result = new BigDecimal(0);
         BigDecimal rate = new BigDecimal(10);
         int param = 0;
-        for(int i = 0; i < str.length(); i++) {
-            if(str.charAt(i) == ' ' && param == 0) {
+        for (int i = 0; i < str.length(); i++) {
+            if (str.charAt(i) == ' ' && param == 0) {
                 continue;
             }
-            if(str.charAt(i) == '-' && param == 0) {
+            if (str.charAt(i) == '-' && param == 0) {
                 param = -1;
                 continue;
             }
-            if(str.charAt(i) == '+' && param == 0) {
+            if (str.charAt(i) == '+' && param == 0) {
                 param = 1;
                 continue;
             }
-            if(str.charAt(i) < 48 || str.charAt(i) > 57) {
+            if (str.charAt(i) < 48 || str.charAt(i) > 57) {
                 break;
             }
             param = param == -1 ? -1 : 1;
@@ -44,10 +44,10 @@ public class Q008_String_to_Integer {
             result = result.add(num);
         }
         result = result.multiply(new BigDecimal(param));
-        if(result.compareTo(new BigDecimal(Integer.MAX_VALUE)) > 0) {
+        if (result.compareTo(new BigDecimal(Integer.MAX_VALUE)) > 0) {
             result = new BigDecimal(Integer.MAX_VALUE);
         }
-        if(result.compareTo(new BigDecimal(Integer.MIN_VALUE)) < 0) {
+        if (result.compareTo(new BigDecimal(Integer.MIN_VALUE)) < 0) {
             result = new BigDecimal(Integer.MIN_VALUE);
         }
         return result.intValue();

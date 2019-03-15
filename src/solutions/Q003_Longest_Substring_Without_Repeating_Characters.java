@@ -18,8 +18,8 @@ public class Q003_Longest_Substring_Without_Repeating_Characters {
         int count = 0;
         int position = 0;
         Map<Character, Integer> countMap = new HashMap<Character, Integer>();
-        for(int i = 0; i < strArr.length; i++) {
-            if(countMap.containsKey(strArr[i])) {
+        for (int i = 0; i < strArr.length; i++) {
+            if (countMap.containsKey(strArr[i])) {
                 position = position > countMap.get(strArr[i]) ? position : countMap.get(strArr[i]);
                 int length = i - position;
                 result = result < length ? length : result;

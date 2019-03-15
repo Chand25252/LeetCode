@@ -18,8 +18,8 @@ public class Q011_Container_With_Most_Water {
         int head = 0;
         int tail = height.length - 1;
         int area = tail * Math.min(height[tail], height[head]);
-        while(tail > head) {
-            if(height[tail] >= height[head]) {
+        while (tail > head) {
+            if (height[tail] >= height[head]) {
                 head++;
             } else {
                 tail--;

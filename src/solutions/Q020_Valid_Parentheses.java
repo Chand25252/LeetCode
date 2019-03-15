@@ -22,7 +22,7 @@ public class Q020_Valid_Parentheses {
             if ('(' == ch || '[' == ch || '{' == ch) {
                 st.push(ch);
             } else {
-                if(st.isEmpty()) {
+                if (st.isEmpty()) {
                     return false;
                 }
                 char lch = st.peek();

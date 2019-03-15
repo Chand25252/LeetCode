@@ -14,18 +14,18 @@ import java.util.List;
 public class Q022_Generate_Parentheses {
     public List<String> generateParenthesis(int n) {
         List<String> result = new ArrayList<>();
-        partition(result, "", 0, 0 , n);
+        partition(result, "", 0, 0, n);
         return result;
     }
 
     private void partition(List<String> result, String item, int i, int j, int n) {
-        if(i < n){
+        if (i < n) {
             partition(result, item + "(", i + 1, j, n);
         }
-        if(j < n && j < i && i > 0){
+        if (j < n && j < i && i > 0) {
             partition(result, item + ")", i, j + 1, n);
         }
-        if(i + j == n * 2) {
+        if (i + j == n * 2) {
             result.add(item);
         }
     }

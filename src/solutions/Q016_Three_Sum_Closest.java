@@ -26,14 +26,14 @@ public class Q016_Three_Sum_Closest {
                     return sum;
                 }
                 int distance = Math.abs(target - sum);
-                if(distance < temp) {
+                if (distance < temp) {
                     temp = distance;
                     result = sum;
                 }
-                if(sum < target) {
+                if (sum < target) {
                     j++;
                 }
-                if(sum > target) {
+                if (sum > target) {
                     k--;
                 }
             }

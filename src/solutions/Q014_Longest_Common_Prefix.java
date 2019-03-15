@@ -12,20 +12,20 @@ package solutions;
  */
 public class Q014_Longest_Common_Prefix {
     public String longestCommonPrefix(String[] strs) {
-        if(strs == null || strs.length == 0) {
+        if (strs == null || strs.length == 0) {
             return "";
         }
         int index = 0;
-        while(true) {
+        while (true) {
             String compareStr = "";
-            for(String str : strs) {
-                if(str.length() <= index) {
+            for (String str : strs) {
+                if (str.length() <= index) {
                     return str.substring(0, index);
                 }
                 String target = String.valueOf(str.charAt(index));
-                if("".equals(compareStr)) {
+                if ("".equals(compareStr)) {
                     compareStr = target;
-                } else if(target.equals(compareStr)) {
+                } else if (target.equals(compareStr)) {
                     continue;
                 } else {
                     return str.substring(0, index);

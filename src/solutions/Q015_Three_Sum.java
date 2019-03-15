@@ -33,13 +33,13 @@ public class Q015_Three_Sum {
                     result.add(nums[k]);
                     results.add(result);
                 }
-                if(sum <= target) {
+                if (sum <= target) {
                     j++;
                     while (j < k && nums[j] == nums[j - 1]) {
                         j++;
                     }
                 }
-                if(sum >= target) {
+                if (sum >= target) {
                     k--;
                     while (j < k && nums[k] == nums[k + 1]) {
                         k--;

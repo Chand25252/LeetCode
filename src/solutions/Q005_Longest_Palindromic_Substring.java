@@ -15,18 +15,18 @@ public class Q005_Longest_Palindromic_Substring {
         }
         int start = 0;
         int end = 0;
-        for(int i = 0; i < s.length() - 1; i++) {
+        for (int i = 0; i < s.length() - 1; i++) {
             int radius1 = check(s, i, i);
             int radius2 = check(s, i, i + 1);
-            if(radius2 == 0 && i < s.length() - 1 && s.charAt(i) == s.charAt(i + 1) && (end - start) == 0) {
+            if (radius2 == 0 && i < s.length() - 1 && s.charAt(i) == s.charAt(i + 1) && (end - start) == 0) {
                 start = i;
                 end = i + 1;
             }
-            if(radius1 > radius2 && radius1 * 2 > (end - start)) {
+            if (radius1 > radius2 && radius1 * 2 > (end - start)) {
                 start = i - radius1;
                 end = i + radius1;
             }
-            if(radius2 > 0 && radius2 >= radius1 && radius2 * 2 > (end - start - 1)) {
+            if (radius2 > 0 && radius2 >= radius1 && radius2 * 2 > (end - start - 1)) {
                 start = i - radius2;
                 end = i + radius2 + 1;
             }
@@ -36,12 +36,12 @@ public class Q005_Longest_Palindromic_Substring {
 
     private int check(String s, int i, int j) {
         int radius = 0;
-        if(s.charAt(i) != s.charAt(j)) {
+        if (s.charAt(i) != s.charAt(j)) {
             return radius;
         }
         int start = i - 1;
         int end = j + 1;
-        while(start >=0 && end < s.length() && s.charAt(start) == s.charAt(end)) {
+        while (start >= 0 && end < s.length() && s.charAt(start) == s.charAt(end)) {
             radius++;
             start--;
             end++;

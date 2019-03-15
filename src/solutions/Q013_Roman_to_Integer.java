@@ -32,8 +32,8 @@ public class Q013_Roman_to_Integer {
         int temp = 0;
         for (int i = 0; i < s.length(); i++) {
             int current = roman_map.get(String.valueOf(s.charAt(i)));
-            if(temp > 0) {
-                if(current > temp) {
+            if (temp > 0) {
+                if (current > temp) {
                     result = result + current - temp;
                     temp = 0;
                 } else {

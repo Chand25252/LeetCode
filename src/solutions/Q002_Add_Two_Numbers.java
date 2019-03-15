@@ -21,14 +21,14 @@ public class Q002_Add_Two_Numbers {
         ListNode head = sum;
         l1 = l1.next;
         l2 = l2.next;
-        while(l1 != null || l2 != null) {
+        while (l1 != null || l2 != null) {
             i = 0;
             j = 0;
-            if(l1 != null) {
+            if (l1 != null) {
                 i = l1.val;
                 l1 = l1.next;
             }
-            if(l2 != null) {
+            if (l2 != null) {
                 j = l2.val;
                 l2 = l2.next;
             }
@@ -38,7 +38,7 @@ public class Q002_Add_Two_Numbers {
             sum.next = newSum;
             sum = newSum;
         }
-        if(plus == 1) {
+        if (plus == 1) {
             ListNode extra = new ListNode(plus);
             sum.next = extra;
         }
@@ -48,6 +48,9 @@ public class Q002_Add_Two_Numbers {
     class ListNode {
         int val;
         ListNode next;
-        ListNode(int x) { val = x; }
+
+        ListNode(int x) {
+            val = x;
+        }
     }
 }

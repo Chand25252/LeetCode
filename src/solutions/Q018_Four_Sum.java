@@ -19,18 +19,18 @@ public class Q018_Four_Sum {
         List<List<Integer>> results = new ArrayList<>();
         Arrays.sort(nums);
         for (int i = 0; i < nums.length - 3; i++) {
-            if(i > 0 && nums[i] == nums[i - 1]) {
+            if (i > 0 && nums[i] == nums[i - 1]) {
                 continue;
             }
-            for(int j = i + 1; j < nums.length - 2; j++) {
-                if(j > i + 1 && nums[j] == nums[j - 1]) {
+            for (int j = i + 1; j < nums.length - 2; j++) {
+                if (j > i + 1 && nums[j] == nums[j - 1]) {
                     continue;
                 }
                 int k = j + 1;
                 int l = nums.length - 1;
-                while(k < l) {
+                while (k < l) {
                     int sum = nums[i] + nums[j] + nums[k] + nums[l];
-                    if(sum == target) {
+                    if (sum == target) {
                         List<Integer> result = new ArrayList<>();
                         result.add(nums[i]);
                         result.add(nums[j]);
@@ -38,15 +38,15 @@ public class Q018_Four_Sum {
                         result.add(nums[l]);
                         results.add(result);
                     }
-                    if(sum <= target) {
+                    if (sum <= target) {
                         k++;
-                        while(k < l && nums[k] == nums[k - 1]) {
+                        while (k < l && nums[k] == nums[k - 1]) {
                             k++;
                         }
                     }
-                    if(sum >= target) {
+                    if (sum >= target) {
                         l--;
-                        while(k < l && nums[l] == nums[l + 1]) {
+                        while (k < l && nums[l] == nums[l + 1]) {
                             l--;
                         }
                     }
