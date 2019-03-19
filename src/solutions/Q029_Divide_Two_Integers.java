@@ -19,23 +19,23 @@ public class Q029_Divide_Two_Integers {
     public int divide(int dividend, int divisor) {
         int flag = 1;
         boolean mark = false;
-        if(dividend == 0) {
+        if (dividend == 0) {
             return 0;
         }
-        if(divisor == 1) {
+        if (divisor == 1) {
             return dividend;
         }
-        if(divisor == -1) {
+        if (divisor == -1) {
             return dividend == Integer.MIN_VALUE ? Integer.MAX_VALUE : 0 - dividend;
         }
-        if(divisor == Integer.MIN_VALUE) {
+        if (divisor == Integer.MIN_VALUE) {
             return dividend == Integer.MIN_VALUE ? 1 : 0;
         }
-        if(dividend == Integer.MIN_VALUE) {
+        if (dividend == Integer.MIN_VALUE) {
             dividend++;
             mark = true;
         }
-        if((dividend < 0 && divisor < 0) || (dividend > 0 && divisor > 0)) {
+        if ((dividend < 0 && divisor < 0) || (dividend > 0 && divisor > 0)) {
             flag = 1;
         } else {
             flag = -1;
@@ -43,11 +43,11 @@ public class Q029_Divide_Two_Integers {
         dividend = dividend < 0 ? 0 - dividend : dividend;
         divisor = divisor < 0 ? 0 - divisor : divisor;
         int result = 0;
-        while(dividend >= divisor) {
+        while (dividend >= divisor) {
             dividend = dividend - divisor;
             result++;
         }
-        if(mark && dividend + 1 == divisor) {
+        if (mark && dividend + 1 == divisor) {
             result++;
         }
         return flag == 1 ? result : 0 - result;
