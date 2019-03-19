@@ -13,37 +13,37 @@ package solutions;
 public class Q034_Find_First_and_Last_Position_of_Element_in_Sorted_Array {
     public int[] searchRange(int[] nums, int target) {
         int[] result = new int[]{-1, -1};
-        if(nums.length == 1 && nums[0] == target) {
+        if (nums.length == 1 && nums[0] == target) {
             result[0] = 0;
             result[1] = 0;
             return result;
         }
         int head = 0;
         int tail = nums.length - 1;
-        while(head <= tail) {
+        while (head <= tail) {
             int mid = (head + tail) / 2;
-            if((nums[mid] == target) && (mid == 0 || nums[mid - 1] != target)) {
+            if ((nums[mid] == target) && (mid == 0 || nums[mid - 1] != target)) {
                 result[0] = mid;
                 break;
             }
-            if(target <= nums[mid]) {
+            if (target <= nums[mid]) {
                 tail = mid - 1;
             } else {
                 head = mid + 1;
             }
         }
-        if(result[0] == -1) {
+        if (result[0] == -1) {
             return result;
         }
         head = 0;
         tail = nums.length - 1;
-        while(head <= tail) {
+        while (head <= tail) {
             int mid = (head + tail) / 2;
-            if((nums[mid] == target) && (mid == nums.length - 1 || nums[mid + 1] != target)) {
+            if ((nums[mid] == target) && (mid == nums.length - 1 || nums[mid + 1] != target)) {
                 result[1] = mid;
                 break;
             }
-            if(target >= nums[mid]) {
+            if (target >= nums[mid]) {
                 head = mid + 1;
             } else {
                 tail = mid - 1;
