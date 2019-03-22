@@ -30,8 +30,8 @@ public class Q038_Count_and_Say {
             int sum = 0;
             char ch = result.charAt(0);
             String temp = "";
-            for(int j = 0; j < result.length(); j++) {
-                if(ch == result.charAt(j)) {
+            for (int j = 0; j < result.length(); j++) {
+                if (ch == result.charAt(j)) {
                     sum++;
                 } else {
                     temp = temp + sum + ch;

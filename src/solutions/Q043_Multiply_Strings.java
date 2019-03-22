@@ -27,13 +27,13 @@ public class Q043_Multiply_Strings {
                 sumArr[i + j] = sum;
                 int k = 1;
                 carry = sumArr[i + j + k] + carry;
-                if(carry >= 10) {
+                if (carry >= 10) {
                     sumArr[i + j + k] = carry - 10;
                     carry = 1;
                     while (i + j + k < sumArr.length - 1) {
                         k++;
                         carry = carry + sumArr[i + j + k];
-                        if(carry < 10) {
+                        if (carry < 10) {
                             sumArr[i + j + k] = carry;
                             break;
                         }
@@ -47,7 +47,7 @@ public class Q043_Multiply_Strings {
         }
         boolean valid = false;
         for (int i = sumArr.length - 1; i >= 0; i--) {
-            if(sumArr[i] != 0) {
+            if (sumArr[i] != 0) {
                 valid = true;
             }
             if (valid) {

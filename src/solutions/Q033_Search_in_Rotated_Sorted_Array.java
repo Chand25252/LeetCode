@@ -14,24 +14,24 @@ package solutions;
  */
 public class Q033_Search_in_Rotated_Sorted_Array {
     public int search(int[] nums, int target) {
-        if(nums.length == 0) {
+        if (nums.length == 0) {
             return -1;
         }
-        if(nums.length == 1) {
+        if (nums.length == 1) {
             return nums[0] == target ? 0 : -1;
         }
         int head = 0;
         int tail = nums.length;
         int mid = (head) + tail / 2;
         while (mid != head) {
-            if(nums[mid] == target) {
+            if (nums[mid] == target) {
                 return mid;
             }
-            if(nums[head] == target) {
+            if (nums[head] == target) {
                 return head;
             }
             if (nums[mid] > nums[head]) {
-                if(target <= nums[mid] && target >= nums[head]) {
+                if (target <= nums[mid] && target >= nums[head]) {
                     tail = mid;
                     mid = (head + mid) / 2;
                 } else {
@@ -39,7 +39,7 @@ public class Q033_Search_in_Rotated_Sorted_Array {
                     mid = (mid + tail) / 2;
                 }
             } else if (nums[mid] < nums[head]) {
-                if(target >= nums[mid] && target <= nums[head]) {
+                if (target >= nums[mid] && target <= nums[head]) {
                     head = mid;
                     mid = (mid + tail) / 2;
                 } else {

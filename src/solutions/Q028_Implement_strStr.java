@@ -15,33 +15,33 @@ import java.util.List;
  */
 public class Q028_Implement_strStr {
     public int strStr(String haystack, String needle) {
-        if("".equals(needle)) {
+        if ("".equals(needle)) {
             return 0;
         }
-        if(needle.length() > haystack.length()) {
+        if (needle.length() > haystack.length()) {
             return -1;
         }
         List<Integer> position = new ArrayList<Integer>();
-        for(int i = 0; i < haystack.length(); i++) {
-            if(haystack.charAt(i) == needle.charAt(0)) {
+        for (int i = 0; i < haystack.length(); i++) {
+            if (haystack.charAt(i) == needle.charAt(0)) {
                 position.add(i);
             }
         }
-        if(position.size() == 0) {
+        if (position.size() == 0) {
             return -1;
         }
-        for(int i = 0; i < position.size(); i++) {
+        for (int i = 0; i < position.size(); i++) {
             boolean correct = true;
             int index = position.get(i);
-            for(int j = 0; j < needle.length(); j++) {
-                if(index < haystack.length() && haystack.charAt(index) == needle.charAt(j)) {
+            for (int j = 0; j < needle.length(); j++) {
+                if (index < haystack.length() && haystack.charAt(index) == needle.charAt(j)) {
                     index++;
                     continue;
                 }
                 correct = false;
                 break;
             }
-            if(correct) {
+            if (correct) {
                 return position.get(i);
             }
         }

@@ -17,11 +17,11 @@ public class Q024_Swap_Nodes_in_Pairs {
         }
         ListNode result = head.next;
         ListNode preNode = null;
-        while(head != null && head.next != null) {
+        while (head != null && head.next != null) {
             ListNode temp = head.next;
             head.next = head.next.next;
             temp.next = head;
-            if(preNode != null) {
+            if (preNode != null) {
                 preNode.next = temp;
             }
             preNode = temp.next;

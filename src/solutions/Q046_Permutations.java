@@ -17,7 +17,7 @@ public class Q046_Permutations {
         List<List<Integer>> results = new ArrayList<>();
         Arrays.sort(nums);
         setResult(results, nums);
-        while(partition(results, nums)) {
+        while (partition(results, nums)) {
         }
         return results;
     }

@@ -12,13 +12,13 @@ package solutions;
  */
 public class Q026_Remove_Duplicates_from_Sorted_Array {
     public int removeDuplicates(int[] nums) {
-        if(nums.length <= 1) {
+        if (nums.length <= 1) {
             return nums.length;
         }
         int temp = nums[0];
         int position = 1;
         for (int i = 1; i < nums.length; i++) {
-            if(nums[i] == temp) {
+            if (nums[i] == temp) {
                 continue;
             }
             temp = nums[i];
