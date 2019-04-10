@@ -12,7 +12,7 @@ import java.util.*;
  * @date 2019-04-09 18:13:30
  */
 public class Q103_Binary_Tree_Zigzag_Level_Order_Traversal {
-    public static List<List<Integer>> zigzagLevelOrder(TreeNode root) {
+    public List<List<Integer>> zigzagLevelOrder(TreeNode root) {
         List<List<Integer>> result = new ArrayList<>();
         if (root == null) {
             return result;
@@ -54,7 +54,7 @@ public class Q103_Binary_Tree_Zigzag_Level_Order_Traversal {
         return result;
     }
 
-    public static class TreeNode {
+    public class TreeNode {
         int val;
         TreeNode left;
         TreeNode right;
@@ -63,12 +63,4 @@ public class Q103_Binary_Tree_Zigzag_Level_Order_Traversal {
         }
     }
 
-    public static void main(String[] args) {
-        TreeNode root = new TreeNode(3);
-        root.left = new TreeNode(9);
-        root.right = new TreeNode(20);
-        root.right.left = new TreeNode(15);
-        root.right.right = new TreeNode(7);
-        zigzagLevelOrder(root);
-    }
 }
