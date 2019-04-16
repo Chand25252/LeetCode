@@ -6,6 +6,11 @@ package solutions;
     注意:
         你不能同时参与多笔交易（你必须在再次购买前出售掉之前的股票）。
 */
+
+/**
+ * @author Chand
+ * @date 2019-04-15 17:33:17
+ */
 public class Q123_Best_Time_to_Buy_and_Sell_Stock_III {
     public int maxProfit(int[] prices) {
         if (prices == null || prices.length == 0) {
