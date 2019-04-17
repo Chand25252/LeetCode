@@ -16,8 +16,8 @@ public class Q121_Best_Time_to_Buy_and_Sell_Stock {
         int result = 0;
         for (int i = 0; i < prices.length; i++) {
             for (int j = i + 1; j < prices.length; j++) {
-                int profile = prices[j] - prices[i];
-                result = result > profile ? result : profile;
+                int profit = prices[j] - prices[i];
+                result = result > profit ? result : profit;
             }
         }
         return result;

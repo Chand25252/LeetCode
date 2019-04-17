@@ -30,15 +30,15 @@ public class Q123_Best_Time_to_Buy_and_Sell_Stock_III {
         }
         for (int i = 0; i < dp.length; i++) {
             min = prices[i];
-            int profile = 0;
+            int profit = 0;
             for (int j = i; j < prices.length; j++) {
                 if (prices[j] > min) {
-                    profile = profile > (prices[j] - min) ? profile : (prices[j] - min);
+                    profit = profit > (prices[j] - min) ? profit : (prices[j] - min);
                 } else {
                     min = prices[j];
                 }
             }
-            result = result > profile + dp[i] ? result : profile + dp[i];
+            result = result > profit + dp[i] ? result : profit + dp[i];
         }
         return result;
     }

@@ -16,7 +16,7 @@ import java.util.List;
  * @date 2019-04-09 15:37:50
  */
 public class Q099_Recover_Binary_Search_Tree {
-    public static void recoverTree(TreeNode root) {
+    public void recoverTree(TreeNode root) {
         List<TreeNode> nodeList = new ArrayList<>();
         partition(root, nodeList);
         int position = -1;
@@ -36,7 +36,7 @@ public class Q099_Recover_Binary_Search_Tree {
         }
     }
 
-    private static void partition(TreeNode root, List<TreeNode> nodeList) {
+    private void partition(TreeNode root, List<TreeNode> nodeList) {
         if (root == null) {
             return;
         }
@@ -45,19 +45,12 @@ public class Q099_Recover_Binary_Search_Tree {
         partition(root.right, nodeList);
     }
 
-    public static class TreeNode {
+    public class TreeNode {
         int val;
         TreeNode left;
         TreeNode right;
         TreeNode(int x) {
             val = x;
         }
-    }
-
-    public static void main(String[] args) {
-        TreeNode root = new TreeNode(1);
-        root.left = new TreeNode(3);
-        root.left.right = new TreeNode(2);
-        recoverTree(root);
     }
 }
