@@ -5,11 +5,11 @@ package solutions;
     将其重新排列后变为： L0→Ln→L1→Ln-1→L2→Ln-2→…
     你不能只是单纯的改变节点内部的值，而是需要实际的进行节点交换。
 */
+
 /**
  * @author Chand
  * @date 2019-04-22 17:25:45
  */
-
 public class Q143_Reorder_List {
     public void reorderList(ListNode head) {
         if (head == null || head.next == null || head.next.next == null) {
