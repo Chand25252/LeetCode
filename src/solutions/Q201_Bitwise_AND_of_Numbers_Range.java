@@ -4,7 +4,7 @@ package solutions;
 
 /**
  * @author Chand
- * @Date: 22019-06-25 14:10:11
+ * @Date: 2019-06-25 14:10:11
  */
 public class Q201_Bitwise_AND_of_Numbers_Range {
     public int rangeBitwiseAnd(int m, int n) {
